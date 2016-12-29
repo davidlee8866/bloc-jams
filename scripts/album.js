@@ -77,7 +77,10 @@ var findParentByClassName = function(element, targetClass) {
             currentParent = currentParent.parentElement;
         }
         return currentParent;
-    }
+    }else if (currentParent != currentParent.parentElement){
+        alert("No Parent Found ");
+    }else if (currentParent != currentParent.className){
+        alert("No parent found with that class name ");}
 };
 
 
@@ -89,13 +92,16 @@ var getSongItem = function(element) {
 //            alert("scenario 1: " + element.className);
             return findParentByClassName(element, 'song-item-number');
         case 'album-view-song-item':
+//            alert("scenario 2: " + element.className);
             return element.querySelector('.song-item-number');
         case 'song-item-title':
         case 'song-item-duration':
-//            alert("scenario 2: " + element.className);
+//            alert("scenario 3: " + element.className);
+//            console.log(findParentByClassName(element, 'album-view-song-item').querySelector('.song-item-number'));
             return findParentByClassName(element, 'album-view-song-item').querySelector('.song-item-number');
         case 'song-item-number':
-//            alert("scenario 3: " + element.className);
+//            alert("scenario 4: " + element.className);
+//            console.log('element: ' + element);
             return element;
         default:
             return;

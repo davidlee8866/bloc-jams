@@ -45,7 +45,6 @@
  };
 
 
-
  var setCurrentAlbum = function(album) {
      // #1
      var albumTitle = document.getElementsByClassName('album-view-title')[0];

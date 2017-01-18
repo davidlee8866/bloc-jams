@@ -1,4 +1,4 @@
- // Example Album
+// Example Album
  var albumPicasso = {
      title: 'The Colors',
      artist: 'Pablo Picasso',
@@ -78,8 +78,8 @@
         if (songNumber !== currentlyPlayingSong) {
             songNumberCell.html(songNumber);
 
+        };
      };
-     
      $row.find('.song-item-number').click(clickHandler);
 
      $row.hover(onHover, offHover);
